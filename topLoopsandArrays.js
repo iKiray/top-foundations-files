@@ -1,4 +1,4 @@
-/*
+
 function sumOfTripledEvens(array) {
   let sum = 0;
   for (let i = 0; i < array.length; i++) {
@@ -13,5 +13,21 @@ function sumOfTripledEvens(array) {
   }
   return sum;
 }
-*/
 
+function sumOfTripledEvens(array) {
+    for (let i = 0; i < array.length; i++) {
+        let evenNumbers = array.filter(num => num % 2 === 0);
+        let multiplyNumbers = evenNumbers.map(num => num * 3);
+        let addNumbers = multiplyNumbers.reduce((total, currentItem) => {
+            return total * currentItem;
+        }, 1);
+    }
+}
+
+//solution
+function sumOfTripledEvens(array) {
+  return array
+    .filter((num) => num % 2 === 0)
+    .map((num) => num * 3)
+    .reduce((acc, curr) => acc + curr);
+}
