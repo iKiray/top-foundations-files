@@ -29,4 +29,8 @@ function alertFunction() {
     alert("Button Clicked!");
 }
 const btn = document.querySelector("#btn");
-btn.addEventListener("click", alertFunction); // also btn.onlick = alertFunction;
+//btn.addEventListener("click", alertFunction); // also btn.onlick = alertFunction;
+btn.addEventListener("click", function(e) {
+    console.log(e.target);
+    e.target.style.background = "blue";
+});
