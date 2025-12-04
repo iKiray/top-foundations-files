@@ -24,3 +24,9 @@ para.textContent = "ME TOO!";
 div.appendChild(para);
 
 container.appendChild(div);
+
+function alertFunction() {
+    alert("Button Clicked!");
+}
+const btn = document.querySelector("#btn");
+btn.addEventListener("click", alertFunction); // also btn.onlick = alertFunction;
