@@ -31,13 +31,19 @@
     </ul>
 
     <script>
-        //2.
+        //2
         const list = document.querySelector("ul");
         const input = document.querySelector("input");
         const btn = document.querySelector("button");
 
-        //3.
+        //3 & 4
+        btn.addEventListener("click", function(event) {
+            event.preventDefault();
 
+            //5
+            const inputStore = document.querySelector("input").value;
+
+        });
     </script>
   </body>
 </html>
