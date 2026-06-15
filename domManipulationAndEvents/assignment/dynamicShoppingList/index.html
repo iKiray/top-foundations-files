@@ -43,6 +43,33 @@
             //5
             const inputStore = document.querySelector("input").value;
 
+            //6
+            input.value = "";
+
+            //7
+            const inputList = document.createElement("li");
+            const inputSpan = document.createElement("span");
+            const inputBtn = document.createElement("button");
+
+            //8
+            inputList.appendChild(inputSpan);
+            inputList.appendChild(inputBtn);
+
+            //9
+            inputSpan.textContent = inputStore;
+            inputBtn.textContent = "Delete";
+
+            //10
+            list.appendChild(inputList);
+
+            //11
+            inputBtn.addEventListener("click", function(event) {
+              list.removeChild(inputList);
+            })
+
+            //12
+            input.focus();
+
         });
     </script>
   </body>
